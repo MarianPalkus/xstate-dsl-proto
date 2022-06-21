@@ -1,0 +1,63 @@
+{
+    "name": "xstate-dsl-proto",
+    "displayName": "xstate-dsl-proto",
+    "description": "Please enter a brief description here",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "xstate-dsl-proto",
+            "aliases": ["xstate dsl proto", "xstate-dsl-proto"],
+            "extensions": [".xdslp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "xstate-dsl-proto",
+            "scopeName": "source.xstate-dsl-proto",
+            "path": "./syntaxes/xstate-dsl-proto.tmLanguage.json"
+        }]
+    },
+    "activationEvents": [
+        "onLanguage:xstate-dsl-proto"
+    ],
+    "files": [
+        "bin",
+        "out",
+        "src"
+    ],
+    "bin": {
+        "xstate-dsl-proto-cli": "./bin/cli"
+    },
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run build && npm run lint",
+        "build": "tsc -b tsconfig.json",
+        "watch": "tsc -b tsconfig.json --watch",
+        "lint": "eslint src --ext ts",
+        "langium:generate": "langium generate",
+        "langium:watch": "langium generate --watch"
+    },
+    "dependencies": {
+        "chevrotain": "^9.1.0",
+        "colors": "^1.4.0",
+        "commander": "^8.0.0",
+        "langium": "^0.4.0",
+        "vscode-languageclient": "^7.0.0",
+        "vscode-languageserver": "^7.0.0",
+        "vscode-uri": "^3.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^14.17.3",
+        "@types/vscode": "^1.56.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.1",
+        "@typescript-eslint/parser": "^4.14.1",
+        "eslint": "^7.19.0",
+        "langium-cli": "^0.4.0",
+        "typescript": "^4.6.2"
+    }
+}

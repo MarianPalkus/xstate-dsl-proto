@@ -1,0 +1,12 @@
+{
+    "projectName": "XstateDslProto",
+    "languages": [{
+        "id": "xstate-dsl-proto",
+        "grammar": "src/language-server/xstate-dsl-proto.langium",
+        "fileExtensions": [".xdslp"],
+        "textMate": {
+            "out": "syntaxes/xstate-dsl-proto.tmLanguage.json"
+        }
+    }],
+    "out": "src/language-server/generated"
+}

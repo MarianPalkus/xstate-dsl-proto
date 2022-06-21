@@ -1,0 +1,57 @@
+{
+  "name": "xstate-dsl-proto",
+  "scopeName": "source.xstate-dsl-proto",
+  "fileTypes": [
+    ".xdslp"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.xstate-dsl-proto",
+      "match": "\\b(action|apply|assign|case|cond|default|done|entry|error|exit|final|initial|invoke|machine|on|send|service|state|when)\\b"
+    },
+    {
+      "name": "string.quoted.double.xstate-dsl-proto",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "string.quoted.single.xstate-dsl-proto",
+      "begin": "'",
+      "end": "'"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.xstate-dsl-proto",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.xstate-dsl-proto"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.xstate-dsl-proto"
+            }
+          }
+        },
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.xstate-dsl-proto"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.xstate-dsl-proto"
+        }
+      ]
+    }
+  }
+}
