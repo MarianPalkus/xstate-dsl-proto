@@ -9,8 +9,8 @@ Experimental dsl for xstate using langium.
 ```bash
 cd xstate-dsl-proto
 npm install
- npm run langium:generate
- npm run build
+npm run langium:generate
+npm run build
 ```
 
 Run the extension via VS Code launch configuration: Hit `f5` in VS Code.
@@ -18,7 +18,7 @@ Run the extension via VS Code launch configuration: Hit `f5` in VS Code.
 # Example
 An example xstate machine could look like the following:
 
-````
+```
 service Service1
 cond Cond1
 action Action1
